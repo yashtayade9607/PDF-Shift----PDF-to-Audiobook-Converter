@@ -1,0 +1,25 @@
+button{
+    position: relative;
+    z-index: 100;
+}
+
+#startButton,
+#stopButton {
+    width: 200px !important;
+    position: relative;
+    z-index: 100;
+}
+
+#speech-to-text-text {
+    color: #1ae4c0;
+    filter: drop-shadow(0 0 15px #1ae4c0);
+    z-index: 99;
+    text-transform: uppercase;
+    margin: 5% 0px;
+}
+
+
+/* footer container */
+.footer-top .container .row{
+    justify-content: space-around;
+}

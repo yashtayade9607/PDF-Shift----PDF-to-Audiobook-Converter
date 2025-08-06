@@ -1,0 +1,241 @@
+/*--------------------------------------------------------------
+  #  General Settings for AudioToText page
+  --------------------------------------------------------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font: normal 1.3rem sans-serif;
+}
+
+/*--------------------------------------------------------------
+# audio-to-text-page1
+--------------------------------------------------------------*/
+#audio-to-text-page1 {
+    height: 75vh;
+    width: 100%;
+    /* background-color: #fff; */
+    font-size: 13vw;
+    letter-spacing: -10px;
+    line-height: 170px;
+    font-weight: bold;
+    color: #000;
+    /* position: relative; */
+
+}
+
+#convert-text {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
+
+#text-speech {
+    position: absolute;
+    left: 8% !important;
+    bottom: 25% !important;
+}
+
+#arrow-text {
+    position: absolute;
+    left: 52%;
+    bottom: 25%;
+}
+
+#pdf-text {
+    position: absolute;
+    right: 10% !important;
+    bottom: 25% !important;
+}
+@media (max-width:720px) {
+    #audio-to-text-page1{
+        display: none;
+    }
+    #audio-to-text-page2{
+        background-color: #000!important;
+        padding-top: 10px;
+    }
+}
+
+/*--------------------------------------------------------------
+  #  TextArea
+  --------------------------------------------------------------*/
+#textarea {
+    background-image: linear-gradient(#f1f1f1 50%, #f9f9f9 50%);
+    background-size: 100% 4rem;
+    border: 1px solid #CCC;
+    width: 100%;
+    height: 400px;
+    line-height: 2rem;
+    margin: 0 auto;
+    padding: 4px 8px;
+    position: relative;
+    z-index: 100;
+}
+
+#instructions {
+    font-size: 15px;
+}
+
+#speech-to-text-text {
+    color: #1ae4c0;
+    filter: drop-shadow(0 0 15px #1ae4c0);
+    z-index: 99;
+    text-transform: uppercase;
+    margin: 5% 0px;
+}
+
+
+/*--------------------------------------------------------------
+  #  start-pause-buttons
+  --------------------------------------------------------------*/
+.start-pause-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+/*--------------------------------------------------------------
+  #  Gradient Pause and Play Button
+  --------------------------------------------------------------*/
+.gradient-btn {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 2px solid #1ae4c0;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    background-color: #000;
+    z-index: 100;
+}
+
+.gradient-btn:hover {
+    /* filter: drop-shadow(0 0 5px #1ae4c0); */
+    box-shadow: 0 0 35px #1ae4c0;
+    color: #fff;
+    /* background-color: #1ae4c0; */
+    transition: 0.5s;
+}
+
+.gradient-btn:before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    /* background-color: #27282c; */
+    color: white;
+}
+
+.gradient-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-btn i::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 110%;
+    width: 10px;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-50px) skewX(325deg);
+    transition: 0.5s;
+}
+
+.gradient-btn i::after {
+    content: '';
+    position: absolute;
+    left: 45%;
+    bottom: -2px;
+    width: 10px;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-50px) skewX(325deg);
+    transition: 0.5s;
+}
+
+.gradient-btn:hover i::before {
+    width: 20px;
+    left: 40%;
+}
+
+.gradient-btn:hover i::after {
+    width: 20px;
+    left: 100%;
+}
+
+@media (max-width: 992px) {
+    .gradient-btn {
+        padding: 7px 20px 8px 20px;
+        margin-right: 15px;
+    }
+
+    .gradient-btn:before {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        color: white;
+    }
+    
+    .gradient-btn i::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 130%;
+        width: 10px;
+        height: 2px;
+        background-color: #000;
+        transform: translateX(-50px) skewX(325deg);
+        transition: 0.5s;
+    }
+    
+    .gradient-btn i::after {
+        content: '';
+        position: absolute;
+        left: 65%;
+        bottom: -2px;
+        width: 10px;
+        height: 2px;
+        background-color: #000;
+        transform: translateX(-50px) skewX(325deg);
+        transition: 0.5s;
+    }
+    
+    .gradient-btn:hover i::before {
+        width: 20px;
+        left: 60%;
+    }
+    
+    .gradient-btn:hover i::after {
+        width: 20px;
+        left: 120%;
+    }
+}
+
+/*--------------------------------------------------------------
+  #  instruction div
+  --------------------------------------------------------------*/
+
+.instructions-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* footer container */
+.footer-top .container .row{
+    justify-content: space-around;
+}
